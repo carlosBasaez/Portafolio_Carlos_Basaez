@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Portafolio Carlos Basaez</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Descripcion</a></li>
+					<li><a href="#one">Herramientas utilizadas</a></li>
+					<li><a href="#two">Juegos creados</a></li>
+
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>Portafolio de videojuegos</h1>
+				<p>La siguiente pagina Web contara con los proyectos creados por mi, sera un espacio donde pueda compartir y mostrar mis videojuegos.</p>
+				<ul class="actions">
+					<li><a href="#two" class="button scrolly">Ver juegos</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- One -->
+		<section id="one" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Herramientas utilizadas</h2>
+				<p>En este espacio dejo las herrmaientas utilizadas para la creación de los videojuegos, estas
+					Herramientas son fundamentales para la materializacion
+					de las ideas de los videojuegos, desde el motor grafico, hasta la imagenes y diseño 3D que se
+					utilizara
+				</p>
+				<div class="features">
+					<section>
+						<span class="width-50px" style="float: left; margin-right: 40px;"><img
+								src="images/unity_logo.png" alt="" width="50px" height="50px"></span>
+						<h3>Unity</h3>
+						&nbsp;
+						<p style="text-align: justify;">
+							Unity es un motor de videojuego multiplataforma, la plataforma de desarrollo tiene soporte
+							de compilación con diferentes tipos de plataformas<br>
+						</p>
+					</section>
+					<section>
+						<span class="width-50px" style="float: left; margin-right: 40px;"><img
+								src="images/blender_logo.png" alt="" width="50px" height="50px"></span>
+						<h3>Blender</h3>
+						&nbsp;
+						<p style="text-align: justify;">
+							Blender es un programa informático multiplataforma, dedicado especialmente al modelado,
+							iluminación, renderizado,
+							la animación y creación de gráficos tridimensionales
+						</p>
+					</section>
+					<section>
+						<span class="width-50px" style="float: left; margin-right: 40px;"><img
+								src="images/gimp_logo.png" alt="" width="50px" height="50px"></span>
+						<h3>Gimp</h3>
+						&nbsp;
+						<p style="text-align: justify;">
+							GIMP es un programa de edición de imágenes digitales en forma de mapa de bits, tanto dibujos
+							como fotografías<br>
+						</p>
+					</section>
+					<section>
+						<span class="width-50px" style="float: left; margin-right: 40px;"><img
+								src="images/mixamo_logo.png" alt="" width="50px" height="50px"></span>
+						<h3>Mixamo</h3>
+						&nbsp;
+						<p style="text-align: justify;">
+							Mixamo es una plataforma en línea que se especializa en la generación automática de
+							animaciones para personajes 3D<br>
+						</p>
+					</section>
+				</div>
+		</section>
+		<!-- Two -->
+		<section id="two" class="wrapper style2 spotlights">
+			<section>
+				<!-- carrusel de fotos -->
+				<style>
+					.image-container {
+						text-align: center;
+						position: relative;
+						display: inline-block;
+					}
+
+					.image {
+						width: 700px;
+						height: 500px;
+						display: block;
+					}
+
+					.botones {
+						text-align: center;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						margin: auto;
+						border: solid 0px !important;
+					}
+
+					.botones button {
+						align-items: center;
+						justify-content: center;
+						font-size: 24px;
+						border: none;
+						background-color: transparent;
+						height: 100px;
+						border: solid 0px !important;
+					}
+				</style>
+				</head>
+
+				<body>
+					<div class="image-container">
+						<img class="image" id="carruselpoto" src="images/pic01.jpg" alt="">
+						<div class="botones">
+							<button onclick="previousImage()">&#9664;</button>
+							<button onclick="nextImage()">&#9654;</button>
+						</div>
+					</div>
+					<script>
+						let currentImageIndex = 0;
+						const images = [
+							'images/pic01.jpg',
+							'images/pic02.jpg',
+							'images/pic03.jpg',
+							'images/pic04.jpg',
+							'images/pic05.jpg'
+						];
+
+						const imgElement = document.querySelector('#carruselpoto');
+
+						function showImage(index) {
+							imgElement.src = images[index];
+							currentImageIndex = index;
+						}
+
+						function previousImage() {
+							currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+							showImage(currentImageIndex);
+						}
+
+						function nextImage() {
+							currentImageIndex = (currentImageIndex + 1) % images.length;
+							showImage(currentImageIndex);
+						}
+					</script>
+				</body>
+
+
+				<div class="content">
+					<div class="inner">
+						<h2>MonoMon</h2>
+						<p>Juego para coleccionar cartas abriendo sobres, probando suerte para completar la colección.</p>
+						<ul class="actions">
+							<li><a href="generic.html" class="disabled-link">Mas detalles</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<!-- carrusel de fotos -->
+
+				<body>
+					<div class="image-container">
+						<img class="image" id="carruselmono" src="images/pic06.jpg" alt="">
+						<div class="botones">
+							<button onclick="previousImage2()">&#9664;</button>
+							<button onclick="nextImage2()">&#9654;</button>
+						</div>
+					</div>
+					<script>
+						let currentImageIndex_2 = 0;
+						const images_2 = [
+							'images/pic06.jpg'
+						];
+
+						const imgElement2 = document.querySelector('#carruselmono');
+
+						function showImage2(index) {
+							imgElement2.src = images_2[index];
+							currentImageIndex_2 = index;
+						}
+
+						function previousImage2() {
+							currentImageIndex_2 = (currentImageIndex_2 - 1 + images_2.length) % images_2.length;
+							showImage2(currentImageIndex_2);
+						}
+
+						function nextImage2() {
+							currentImageIndex_2 = (currentImageIndex_2 + 1) % images_2.length;
+							showImage2(currentImageIndex_2);
+						}
+					</script>
+				</body>
+
+
+				<div class="content">
+					<div class="inner">
+						<h2>Runner 2D (En producción)</h2>
+						<p>Juego 2D con mecanicas de plataformas y pelea con enemigos y jefes.</p>
+						<ul class="actions">
+							<li><a href="generic.html" class="disabled-link">Mas detalles</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</section>
+
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; MonkeStudios.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
